@@ -8,7 +8,12 @@ Welcome to MetaTiME's documentation!
 
 .. include:: ../../README.md
    :parser: myst_parser.sphinx_
-   :start-line: 0
+   :start-line: 0 
+   :end-line: 1 
+
+.. include:: ../../README.md
+   :parser: myst_parser.sphinx_
+   :start-line: 2 
    :end-line: 8
 
 .. include:: ../../README.md
