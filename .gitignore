@@ -1,0 +1,25 @@
+analysis*
+analysis/*
+metatime/metacall*
+metatime/metacall/*
+docs/notebooks_dev/*
+docs/notebooks_dev/.ipynb_checkpoints*
+docs/notebooks/.ipynb_checkpoints/*
+docs/notebooks/.ipynb_checkpoints*
+docs/notebooks/*kraken*
+docs/notebooks/*h5ad
+*.pyc
+
+
+# Python egg metadata, regenerated from source files by setuptools.
+*.egg
+*egg-info*
+*egg-info/*
+.eggs/
+.DS_Store
+
+/**/__pycache__/
+
+metatime/testdata.py
+docs/build*
+docs/build/*

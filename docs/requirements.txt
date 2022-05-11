@@ -1,0 +1,6 @@
+sphinx==4.2.0
+sphinx_rtd_theme==1.0.0
+readthedocs-sphinx-search==0.1.1
+myst_parser==0.15.2
+nbsphinx==0.8.8
+mistune==0.8.4
