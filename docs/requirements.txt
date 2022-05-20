@@ -4,3 +4,12 @@ readthedocs-sphinx-search==0.1.1
 myst_parser==0.15.2
 nbsphinx==0.8.8
 mistune==0.8.4
+# project related
+ipython
+jupyter
+pandas
+scanpy
+anndata
+matplotlib
+adjustText
+leidenalg

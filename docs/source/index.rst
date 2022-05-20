@@ -33,4 +33,4 @@ Welcome to MetaTiME's documentation!
    :caption: API
    :hidden:
    
-   modules
+   metatime 
