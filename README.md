@@ -9,6 +9,7 @@ MetaTiME is a framework to generate data-driven, interpretable, and reproducible
 ## Installation
 `pip install git+https://github.com/yi-zhang/MetaTiME.git`
 
+Installation shall be in minutes .
 ## Interactive tutorials
 ### MetaTiME-Annotator
 [Use MetaTiME to automatically annotate cell states and map signatures ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yi-zhang/MetaTiME/blob/main/docs/notebooks/metatime_annotator.ipynb)
@@ -19,11 +20,28 @@ MetaTiME is a framework to generate data-driven, interpretable, and reproducible
 
 ### Usage
  - [Use MetaTiME to automatically annotate cell states and map signatures](https://github.com/yi-zhang/MetaTiME/blob/main/docs/notebooks/metatime_annotator.ipynb)
- - 
+ 
+### Dependency
+
+- pandas
+- scanpy
+- anndata
+- matplotlib
+- adjustText
+- leidenalg
+
+
+Dependency version tested:
+- pandas==1.1.5
+- scanpy==1.8.2
+- anndata==0.8.0
+- matplotlib==3.5.1
+- adjustText==0.8 beta
+- leidenalg==0.8.3
 
 
 ### Reference
-Manuscript In Submission. More details will be updated!
+Manuscript In In Review. More details will be updated.
 
 ### Contact
 
@@ -37,3 +55,4 @@ Harvard University T.H. Chan School of Public Health
 yiz [AT] ds.dfci.harvard.edu
 
 @Wings7Spread
+
