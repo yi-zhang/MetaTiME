@@ -41,7 +41,8 @@ Dependency version tested:
 
 
 ### Reference
-Manuscript In In Review. More details will be updated.
+Manuscript In Review. Repo continously being improved! More details will be updated.
+[Paper at bioRxiv](https://www.biorxiv.org/content/10.1101/2022.08.05.502989v1)
 
 ### Contact
 
