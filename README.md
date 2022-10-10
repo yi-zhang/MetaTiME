@@ -29,7 +29,7 @@ Installation shall be in minutes .
 - matplotlib
 - adjustText
 - leidenalg
-
+- harmonypy
 
 Dependency version tested:
 - pandas==1.1.5
