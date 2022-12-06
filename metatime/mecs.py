@@ -1,4 +1,6 @@
-## function for meta components
+"""
+## class and functions for meta components
+"""
 import numpy as np
 import pandas as pd
 import os
@@ -20,7 +22,8 @@ def load_mecname( mode='table',
         choose from ['mecnamedict', 'table', 'meciddict']
         load manual assigned name for easy understanding of assigned names
         from file: MeC_anno_name.txt under mecDIR.
-        Required columns: `['MeC_id', 'Annotation', 'UseForCellTypeAnno']`
+        Required columns: `['MeC_id', 'Annotation', 'UseForCellStateAnno']` 
+        Required seperator: tab
         Annotation column NA will be filtered.
 
     Returns
@@ -41,23 +44,29 @@ def load_mecname( mode='table',
     if(mode=='mecnamedict'):
         return(mecnamedict)
 
-def getmecnamedict_ct( mectable ):
+def getmecnamedict_ct( mectable, only_include_mecs_UseForCellStateAnno = True ):
     """ 
     Collect list of meta components to be used for cell state annotation. 
 
     Parameters
     ----------
     mectable
-        must have `UseForCellTypeAnn` column with 0 or 1. 1:used in cell state annotation. this is helpful to remove pan-cell cell state like general mitochondrial activity component.
-        
+        must have `UseForCellStateAnno` column with 0 or 1. 1:used in cell state annotation. this is helpful to remove pan-cell cell state like general mitochondrial activity component.
+    only_include_mecs_UseForCellStateAnno
+        filter mecs used for cell state annotation. 
+        Default: True 
     Returns
     ----------
     dict 
         a subsetted dictionary only containing MeCs used for cell state enrichment.
 
     """
-    mecnamedict = mectable[mectable['UseForCellTypeAnno']==1].set_index('MeC_id')['Annotation'].to_dict()
+    if(only_include_mecs_UseForCellStateAnno):
+        mecnamedict = mectable[mectable['UseForCellStateAnno']==1].set_index('MeC_id')['Annotation'].to_dict()
+    else:
+        mecnamedict = mectable.set_index('MeC_id')['Annotation'].to_dict()
     return(mecnamedict)
+
 
 
 class MetatimeMecs():

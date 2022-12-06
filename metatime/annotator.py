@@ -1,3 +1,7 @@
+"""
+Automatic annotator for tumor single cell data. 
+# 
+# """
 ### MetaTiME annotator
 import pandas as pd
 import anndata
@@ -7,7 +11,7 @@ from typing import Optional, Union
 from metatime import mecs
 import warnings
 
-########## automatic annotator for tumor single cell data. #########
+
 
  
 ########### top1 cell state annotator #######

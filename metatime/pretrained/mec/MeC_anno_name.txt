@@ -1,87 +1,87 @@
-MeCi	MeC_id	mec_id	Annotation	MajorLineage_level0	catogory_index	UseForCellTypeAnno	Type
-0	MeC_0	score_0	Interferon_response	Signaling	50	1	s
-1	MeC_1	score_1	Proliferation_S	Signaling	51	1	s
-2	MeC_2	score_2	Heat_stress	Signaling	54	1	s
-3	MeC_3	score_3	pDC	DC	27	1	ct
-4	MeC_4	score_4	Bplasma	B	2	1	cs
-5	MeC_5	score_5	Proliferation_G2/M	Signaling	52	1	s
-6	MeC_6	score_6	cDC2_MHCII	DC	28	1	cs
-7	MeC_7	score_7	Treg_T-co-signaling	T	21	1	ct
-8	MeC_8	score_8	Cytotoxic_NK	T	8	1	cs
-9	MeC_9	score_9	Mono_CD16	Mono/Mac	36	1	cs
-10	MeC_10	score_10	Mito.	Signaling	72	0	s
-11	MeC_11	score_11	Cytotoxic_NK-T	T	9	1	cs
-12	MeC_12	score_12	CD8T_GZMK-CCL5	T	12	1	cs
-13	MeC_13	score_13	Mast	Mono/Mac	31	1	ct
-14	MeC_14	score_14	Proliferation_2	Signaling	53	1	s
-15	MeC_15	score_15	Ribosome	Signaling	69	1	s
-16	MeC_16	score_16	CD4T_MAIT/Th17	T	23	1	cs
-17	MeC_17	score_17	Mono_CD14	Mono/Mac	33	1	cs
-18	MeC_18	score_18	B	B	0	1	ct
-19	MeC_19	score_19	Mac_C1Q	Mono/Mac	40	1	cs
-20	MeC_20	score_20	Tfh_CXCL13	T	22	1	cs
-21	MeC_21	score_21	CD4T_cytoskeleton	T	24	1	cs
-22	MeC_22	score_22	Fibro_collagen	Stroma	44	1	cs
-23	MeC_23	score_23	Endothelial	Stroma	46	1	ct
-24	MeC_24	score_24	Metallothionein	Signaling	59	1	s
-25	MeC_25	score_25	Cytotoxic_T_GZMB	T	11	1	cs
-26	MeC_26	score_26	Mac_SPP1	Mono/Mac	39	1	cs
-27	MeC_27	score_27	Fibro_Endo_EMT	Stroma	48	1	cs
-28	MeC_28	score_28	Beta_catenin	Signaling	60	1	s
-29	MeC_29	score_29	Mono_CD14_1	Mono/Mac	34	1	cs
-30	MeC_30	score_30	B_Ig-kappa	B	3	1	cs
-31	MeC_31	score_31	protein_processing	Signaling	61	1	s
-32	MeC_32	score_32	CD8T_CD3	T	16	1	cs
-33	MeC_33	score_33	Cycling_MYC	Signaling	55	1	s
-34	MeC_34	score_34	IFNG-CCL3/4_NK-T	T	14	1	cs
-35	MeC_35	score_35	T_immune_synapse	T	19	1	cs
-36	MeC_36	score_36	Mac_SPP1_C1Q	Mono/Mac	41	1	cs
-37	MeC_37	score_37	Mac_lipid_PPAR	Mono/Mac	43	1	cs
-38	MeC_38	score_38	Endo._CCL21	Stroma	47	1	cs
-39	MeC_39	score_39	Platelet	B	6	1	ct
-40	MeC_40	score_40	CD8Tex_CXCL13	T	15	1	cs
-41	MeC_41	score_41	Myofibroblast	Stroma	49	1	ct
-42	MeC_42	score_42	Mac_IL1_NFKB	Mono/Mac	37	1	cs
-43	MeC_43	score_43	T_naive	T	18	1	cs
-44	MeC_44	score_44	MeC_44	Undefined	75	0	u
-45	MeC_45	score_45	Mac_IL1_JUN	Mono/Mac	38	1	cs
-46	MeC_46	score_46	Erythrocytes	B	7	1	ct
-47	MeC_47	score_47	Glycolysis	Signaling	62	1	s
-48	MeC_48	score_48	NK-T_CCL5	T	13	1	cs
-49	MeC_49	score_49	Mac_RNASE_C1Q	Mono/Mac	42	1	cs
-50	MeC_50	score_50	B_PAX5	B	1	1	cs
-51	MeC_51	score_51	DC_mature	DC	29	1	cs
-52	MeC_52	score_52	Mono_MeC_52	Mono/Mac	32	1	ct
-53	MeC_53	score_53	MHCI	Signaling	58	1	s
-54	MeC_54	score_54	Ribosome_1	Signaling	70	1	s
-55	MeC_55	score_55	cDC1	DC	30	1	cs
-56	MeC_56	score_56	T_CREM	T	20	1	cs
-57	MeC_57	score_57	JUN/FOS_1	Signaling	65	1	s
-58	MeC_58	score_58	MHCII_1	Signaling	57	1	s
-59	MeC_59	score_59	B_Ig-lambda	B	5	1	cs
-60	MeC_60	score_60	MeC_60	Undefined	76	0	u
-61	MeC_61	score_61	JUN/FOS	Signaling	64	1	s
-62	MeC_62	score_62	MeC_62_AP1	Undefined	77	0	u
-63	MeC_63	score_63	MHCII	Signaling	56	1	s
-64	MeC_64	score_64	IER2/JUN/FOS	Signaling	66	1	s
-65	MeC_65	score_65	T_co-signaling	T	17	1	cs
-66	MeC_66	score_66	CCL2_MeC_66	Signaling	68	1	s
-67	MeC_67	score_67	MeC_67	Undefined	78	0	u
-68	MeC_68	score_68	NR4A_signaling	Signaling	63	1	s
-69	MeC_69	score_69	CD4T_MeC_69	T	26	1	cs
-70	MeC_70	score_70	T_non_naive	Undefined	79	0	u
-71	MeC_71	score_71	Mito._Ribo.	Signaling	73	0	s
-72	MeC_72	score_72	MeC_72_T	Undefined	80	0	u
-73	MeC_73	score_73	Ribosome_2	Signaling	71	1	s
-74	MeC_74	score_74	Mono_CD14_prolif.	Mono/Mac	35	1	cs
-75	MeC_75	score_75	Cytotoxic_NK-T_GZMK	T	10	1	cs
-76	MeC_76	score_76	CXCL1/2	Signaling	67	1	s
-77	MeC_77	score_77	Bplasma_1	B	4	1	cs
-78	MeC_78	score_78	CD4T_IL7R	T	25	1	cs
-79	MeC_79	score_79	MeC_79	Undefined	81	0	u
-80	MeC_80	score_80	MeC_80	Undefined	82	0	u
-81	MeC_81	score_81	Fibro_VEGF	Stroma	45	1	cs
-82	MeC_82	score_82	MeC_82	Undefined	83	0	u
-83	MeC_83	score_83	MeC_83_Mye/Fibro	Signaling	74	1	s
-84	MeC_84	score_84	MeC_84	Undefined	84	0	u
-85	MeC_85	score_85	MeC_85	Undefined	85	0	u
+MeC_id	Annotation	UseForCellStateAnno
+MeC_0	0: Pan_Interferon-response	1
+MeC_1	1: Pan_Proliferation-S	1
+MeC_2	2: Pan_Heat-stress	1
+MeC_3	3: DC_pDC	1
+MeC_4	4: B_Plasma	1
+MeC_5	5: Pan_Proliferation-G2-M	1
+MeC_6	6: DC_cDC2-MHCII	1
+MeC_7	7: T_Treg-T-co-signaling	1
+MeC_8	8: T_NK-cytotoxic	1
+MeC_9	9: M_Monocyte-CD16	1
+MeC_10	10: Pan_Mitochondrial	0
+MeC_11	11: T_NK-T-cytotoxic	1
+MeC_12	12: T_CD8T-GZMK-CCL5	1
+MeC_13	13: Myeloid_Mast	1
+MeC_14	14: Pan_Proliferation	1
+MeC_15	15: Pan_Ribosome	1
+MeC_16	16: T_CD4T-MAIT-Th17	1
+MeC_17	17: M_Monocyte-CD14	1
+MeC_18	18: B_B	1
+MeC_19	19: M_Macrophage-C1Q	1
+MeC_20	20: T_Tfh-CXCL13	1
+MeC_21	21: T_CD4T-cytoskeleton	1
+MeC_22	22: Stroma_Fibroblast-collagen	1
+MeC_23	23: Stroma_Endothelial	1
+MeC_24	24: Pan_Metallothionein	1
+MeC_25	25: T_Cytotoxic-GZMB	1
+MeC_26	26: M_Macrophage-SPP1	1
+MeC_27	27: Stroma_Fibro-endo-EMT	1
+MeC_28	28: Pan_Beta-catenin	1
+MeC_29	29: M_Monocyte-CD14-S100A12	1
+MeC_30	30: B_B-Ig-kappa	1
+MeC_31	31: Pan_Protein-processing	1
+MeC_32	32: T_CD8T-CD3	1
+MeC_33	33: Pan_Cycling-MYC	1
+MeC_34	34: T_NK-T-IFNG-CCL4	1
+MeC_35	35: T_T-Immune-synapse	1
+MeC_36	36: M_Macrophage-SPP1-C1Q	1
+MeC_37	37: M_Macrophage-lipid-PPARG	1
+MeC_38	38: Stroma_Endothelial-CCL21	1
+MeC_39	39: Myeloid_Platelet	1
+MeC_40	40: T_CD8Tex-CXCL13	1
+MeC_41	41: Stroma_Myofibroblast	1
+MeC_42	42: M_Macrophage-IL1-NFKB	1
+MeC_43	43: T_T-naive	1
+MeC_44	44: Pan_Ubiquitin-C-UBC	0
+MeC_45	45: M_Macrophage-IL1-JUN	1
+MeC_46	46: Myeloid_Erythrocytes	1
+MeC_47	47: Pan_Glycolysis	1
+MeC_48	48: T_NK-T-CCL5	1
+MeC_49	49: M_Macrophage_RNASE1-C1Q	1
+MeC_50	50: B_B-PAX5	1
+MeC_51	51: DC_DC-Mature	1
+MeC_52	52: M_Monocyte-LYZ	1
+MeC_53	53: Pan_MHCI	1
+MeC_54	54: Pan_Ribosome-RPS18	1
+MeC_55	55: DC_cDC1	1
+MeC_56	56: T_T-CREM	1
+MeC_57	57: Pan_AP1-JUN	1
+MeC_58	58: Pan_MHCII	1
+MeC_59	59: B_B-Ig-lambda	1
+MeC_60	60: Pan_Gprotein-regulator-RGS1	0
+MeC_61	61: Pan_AP1-FOS	1
+MeC_62	62: Pan_AP1-JUNB	0
+MeC_63	63: Pan_MHCII-HLA-DRA	1
+MeC_64	64: Pan_AP1-IER2	1
+MeC_65	65: T_T-co-signaling	1
+MeC_66	66: Pan_CCL2	1
+MeC_67	67: Pan_Heat-stress-HSPA1A	1
+MeC_68	68: Pan_NR4A-signaling	1
+MeC_69	69: T_CD4T-CXCR4	1
+MeC_70	70: T_T-non-naive	0
+MeC_71	71: Pan_Mito-ribo	0
+MeC_72	72: Pan_Spermidine-SAT1	0
+MeC_73	73: Pan_Ribosome-CXCR4	0
+MeC_74	74: M_Monocyte-CD14-proliferation	1
+MeC_75	75: T_NK-T-Cytotoxic-GZMB	1
+MeC_76	76: Pan_CXCL1-CXCL2	1
+MeC_77	77: B_Plasma-JCHAIN	1
+MeC_78	78: T_CD4T-IL7R	1
+MeC_79	79: Pan_Steroid-induced-TSC22D3	0
+MeC_80	80: Pan_Ferritin-FTH1	0
+MeC_81	81: Stroma_Fibroblast-VEGF	1
+MeC_82	82: Pan_Phosphatase-DUSP1	0
+MeC_83	83: Pan_Myeloid-fibroblast	1
+MeC_84	84: Pan_Ferritin-FTL	0
+MeC_85	85: Pan_Actin-ACTB	0

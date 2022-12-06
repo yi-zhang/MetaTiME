@@ -1,6 +1,5 @@
-# function for plotting after mapper
 """
-SAME as  scICA/plmapper
+# function for plotting after mapper
 """
 import numpy as np 
 import matplotlib.pyplot as plt
@@ -148,7 +147,8 @@ def plot_umap_mec(pdata : anndata.AnnData,
                  mecnamedict: dict, 
                  use_MeC_name: bool = True, 
                  figfile: str = None,
-                   ):
+                 figsize=(3,3)
+                 ):
 
     """
     Plot signature continuum for a specific MeC. 
@@ -168,7 +168,7 @@ def plot_umap_mec(pdata : anndata.AnnData,
     """
     Xproj = pdata.to_df()
 
-    fig,ax =plt.subplots(1,figsize=(3,3) )
+    fig,ax =plt.subplots(1,figsize= figsize )
 
     # keep value same range
     vmin = min( min(Xproj[meccol] .values) , -3 )
@@ -285,7 +285,7 @@ def gen_mpl_labels(
 
 def plot_annotation_on_data( 
     sdata, 
-    COL='MetaTiME_overcluster'  ,
+    COL='MetaTiME'  ,
     title = None, 
     fontsize = 8,
     MIN_CELL = 5,
