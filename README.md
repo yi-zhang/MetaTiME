@@ -43,6 +43,11 @@ Dependency version tested:
 ### Reference
 Manuscript In Revision. Repo continously being improved! More details will be updated. 
 [Paper at bioRxiv](https://www.biorxiv.org/content/10.1101/2022.08.05.502989v1)
+[Journal Article doi pending]
+
+Tumor scRNAseq Data for MetaTiME @ [Zenodo](10.5281/zenodo.7410180)
+	- A large collection of uniformly processed tumor single-cell RNA-seq. 
+	- Includes raw data and MetaTiME score for the TME cells.
 
 ### Contact
 

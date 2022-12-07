@@ -1,87 +1,87 @@
-MeC_id	Annotation	UseForCellStateAnno
-MeC_0	0: Pan_Interferon-response	1
-MeC_1	1: Pan_Proliferation-S	1
-MeC_2	2: Pan_Heat-stress	1
-MeC_3	3: DC_pDC	1
-MeC_4	4: B_Plasma	1
-MeC_5	5: Pan_Proliferation-G2-M	1
-MeC_6	6: DC_cDC2-MHCII	1
-MeC_7	7: T_Treg-T-co-signaling	1
-MeC_8	8: T_NK-cytotoxic	1
-MeC_9	9: M_Monocyte-CD16	1
-MeC_10	10: Pan_Mitochondrial	0
-MeC_11	11: T_NK-T-cytotoxic	1
-MeC_12	12: T_CD8T-GZMK-CCL5	1
-MeC_13	13: Myeloid_Mast	1
-MeC_14	14: Pan_Proliferation	1
-MeC_15	15: Pan_Ribosome	1
-MeC_16	16: T_CD4T-MAIT-Th17	1
-MeC_17	17: M_Monocyte-CD14	1
-MeC_18	18: B_B	1
-MeC_19	19: M_Macrophage-C1Q	1
-MeC_20	20: T_Tfh-CXCL13	1
-MeC_21	21: T_CD4T-cytoskeleton	1
-MeC_22	22: Stroma_Fibroblast-collagen	1
-MeC_23	23: Stroma_Endothelial	1
-MeC_24	24: Pan_Metallothionein	1
-MeC_25	25: T_Cytotoxic-GZMB	1
-MeC_26	26: M_Macrophage-SPP1	1
-MeC_27	27: Stroma_Fibro-endo-EMT	1
-MeC_28	28: Pan_Beta-catenin	1
-MeC_29	29: M_Monocyte-CD14-S100A12	1
-MeC_30	30: B_B-Ig-kappa	1
-MeC_31	31: Pan_Protein-processing	1
-MeC_32	32: T_CD8T-CD3	1
-MeC_33	33: Pan_Cycling-MYC	1
-MeC_34	34: T_NK-T-IFNG-CCL4	1
-MeC_35	35: T_T-Immune-synapse	1
-MeC_36	36: M_Macrophage-SPP1-C1Q	1
-MeC_37	37: M_Macrophage-lipid-PPARG	1
-MeC_38	38: Stroma_Endothelial-CCL21	1
-MeC_39	39: Myeloid_Platelet	1
-MeC_40	40: T_CD8Tex-CXCL13	1
-MeC_41	41: Stroma_Myofibroblast	1
-MeC_42	42: M_Macrophage-IL1-NFKB	1
-MeC_43	43: T_T-naive	1
-MeC_44	44: Pan_Ubiquitin-C-UBC	0
-MeC_45	45: M_Macrophage-IL1-JUN	1
-MeC_46	46: Myeloid_Erythrocytes	1
-MeC_47	47: Pan_Glycolysis	1
-MeC_48	48: T_NK-T-CCL5	1
-MeC_49	49: M_Macrophage_RNASE1-C1Q	1
-MeC_50	50: B_B-PAX5	1
-MeC_51	51: DC_DC-Mature	1
-MeC_52	52: M_Monocyte-LYZ	1
-MeC_53	53: Pan_MHCI	1
-MeC_54	54: Pan_Ribosome-RPS18	1
-MeC_55	55: DC_cDC1	1
-MeC_56	56: T_T-CREM	1
-MeC_57	57: Pan_AP1-JUN	1
-MeC_58	58: Pan_MHCII	1
-MeC_59	59: B_B-Ig-lambda	1
-MeC_60	60: Pan_Gprotein-regulator-RGS1	0
-MeC_61	61: Pan_AP1-FOS	1
-MeC_62	62: Pan_AP1-JUNB	0
-MeC_63	63: Pan_MHCII-HLA-DRA	1
-MeC_64	64: Pan_AP1-IER2	1
-MeC_65	65: T_T-co-signaling	1
-MeC_66	66: Pan_CCL2	1
-MeC_67	67: Pan_Heat-stress-HSPA1A	1
-MeC_68	68: Pan_NR4A-signaling	1
-MeC_69	69: T_CD4T-CXCR4	1
-MeC_70	70: T_T-non-naive	0
-MeC_71	71: Pan_Mito-ribo	0
-MeC_72	72: Pan_Spermidine-SAT1	0
-MeC_73	73: Pan_Ribosome-CXCR4	0
-MeC_74	74: M_Monocyte-CD14-proliferation	1
-MeC_75	75: T_NK-T-Cytotoxic-GZMB	1
-MeC_76	76: Pan_CXCL1-CXCL2	1
-MeC_77	77: B_Plasma-JCHAIN	1
-MeC_78	78: T_CD4T-IL7R	1
-MeC_79	79: Pan_Steroid-induced-TSC22D3	0
-MeC_80	80: Pan_Ferritin-FTH1	0
-MeC_81	81: Stroma_Fibroblast-VEGF	1
-MeC_82	82: Pan_Phosphatase-DUSP1	0
-MeC_83	83: Pan_Myeloid-fibroblast	1
-MeC_84	84: Pan_Ferritin-FTL	0
-MeC_85	85: Pan_Actin-ACTB	0
+MeCi   MeC_id Annotation    MecCategory   MecCategoryAbbreviation     Annotation_v0 catogory_index       MeC_size      MeC_number_datasets  UseForCellStateAnno
+0      MeC_0  0: Pan_Interferon-response  Pan: Pan-cell signaling     Pan    Interferon_response  50     40     40     1
+1      MeC_1  1: Pan_Proliferation-S      Pan: Pan-cell signaling     Pan    Proliferation_S      51     32     32     1
+2      MeC_2  2: Pan_Heat-stress   Pan: Pan-cell signaling     Pan    Heat_stress   54     28     27     1
+3      MeC_3  3: DC_pDC     DC: dendritic cells  DC     pDC    25     25     25     1
+4      MeC_4  4: B_Plasma   B: B cells    B      Bplasma       2      24     24     1
+5      MeC_5  5: Pan_Proliferation-G2-M   Pan: Pan-cell signaling     Pan    Proliferation_G2/M   52     23     23     1
+6      MeC_6  6: DC_cDC2-MHCII     DC: dendritic cells  DC     cDC2_MHCII    26     22     22     1
+7      MeC_7  7: T_Treg-T-co-signaling    T: CD8T, CD4T, NK cells     T      Treg_T-co-signaling  19     21     21     1
+8      MeC_8  8: T_NK-cytotoxic    T: CD8T, CD4T, NK cells     T      Cytotoxic_NK  6      19     19     1
+9      MeC_9  9: M_Monocyte-CD16   M: monocytes and macrophages       M      Mono_CD16     33     18     18     1
+10     MeC_10 10: Pan_Mitochondrial       Pan: Pan-cell signaling     Pan    Mito.  72     18     18     0
+11     MeC_11 11: T_NK-T-cytotoxic T: CD8T, CD4T, NK cells     T      Cytotoxic_NK-T       7      17     17     1
+12     MeC_12 12: T_CD8T-GZMK-CCL5 T: CD8T, CD4T, NK cells     T      CD8T_GZMK-CCL5       10     16     16     1
+13     MeC_13 13: Myeloid_Mast     Myeloid: other myeloid cells besides monocytes and macrophages OtherMye      Mast   41     15     15     1
+14     MeC_14 14: Pan_Proliferation       Pan: Pan-cell signaling     Pan    Proliferation_2      53     15     15     1
+15     MeC_15 15: Pan_Ribosome     Pan: Pan-cell signaling     Pan    Ribosome      69     15     15     1
+16     MeC_16 16: T_CD4T-MAIT-Th17 T: CD8T, CD4T, NK cells     T      CD4T_MAIT/Th17       21     14     14     1
+17     MeC_17 17: M_Monocyte-CD14  M: monocytes and macrophages       M      Mono_CD14     30     14     14     1
+18     MeC_18 18: B_B       B: B cells    B      B      0      14     14     1
+19     MeC_19 19: M_Macrophage-C1Q M: monocytes and macrophages       M      Mac_C1Q       37     14     13     1
+20     MeC_20 20: T_Tfh-CXCL13     T: CD8T, CD4T, NK cells     T      Tfh_CXCL13    20     13     13     1
+21     MeC_21 21: T_CD4T-cytoskeleton     T: CD8T, CD4T, NK cells     T      CD4T_cytoskeleton    22     13     13     1
+22     MeC_22 22: Stroma_Fibroblast-collagen     Stroma: stroma cells Stroma Fibro_collagen       44     13     13     1
+23     MeC_23 23: Stroma_Endothelial      Stroma: stroma cells Stroma Endothelial   46     13     13     1
+24     MeC_24 24: Pan_Metallothionein     Pan: Pan-cell signaling     Pan    Metallothionein      59     12     12     1
+25     MeC_25 25: T_Cytotoxic-GZMB T: CD8T, CD4T, NK cells     T      Cytotoxic_T_GZMB     9      12     11     1
+26     MeC_26 26: M_Macrophage-SPP1       M: monocytes and macrophages       M      Mac_SPP1      36     12     12     1
+27     MeC_27 27: Stroma_Fibro-endo-EMT   Stroma: stroma cells Stroma Fibro_Endo_EMT       48     12     12     1
+28     MeC_28 28: Pan_Beta-catenin Pan: Pan-cell signaling     Pan    Beta_catenin  60     11     10     1
+29     MeC_29 29: M_Monocyte-CD14-S100A12 M: monocytes and macrophages       M      Mono_CD14_1   31     11     11     1
+30     MeC_30 30: B_B-Ig-kappa     B: B cells    B      B_Ig-kappa    3      11     8      1
+31     MeC_31 31: Pan_Protein-processing  Pan: Pan-cell signaling     Pan    protein_processing   61     10     10     1
+32     MeC_32 32: T_CD8T-CD3       T: CD8T, CD4T, NK cells     T      CD8T_CD3      14     10     10     1
+33     MeC_33 33: Pan_Cycling-MYC  Pan: Pan-cell signaling     Pan    Cycling_MYC   55     10     10     1
+34     MeC_34 34: T_NK-T-IFNG-CCL4 T: CD8T, CD4T, NK cells     T      IFNG-CCL3/4_NK-T     12     9      9      1
+35     MeC_35 35: T_T-Immune-synapse      T: CD8T, CD4T, NK cells     T      T_immune_synapse     17     9      9      1
+36     MeC_36 36: M_Macrophage-SPP1-C1Q   M: monocytes and macrophages       M      Mac_SPP1_C1Q  38     8      8      1
+37     MeC_37 37: M_Macrophage-lipid-PPARG       M: monocytes and macrophages       M      Mac_lipid_PPAR       40     8      8      1
+38     MeC_38 38: Stroma_Endothelial-CCL21       Stroma: stroma cells Stroma Endo._CCL21   47     8      8      1
+39     MeC_39 39: Myeloid_Platelet Myeloid: other myeloid cells besides monocytes and macrophages OtherMye      Platelet      42     8      8      1
+40     MeC_40 40: T_CD8Tex-CXCL13  T: CD8T, CD4T, NK cells     T      CD8Tex_CXCL13 13     8      8      1
+41     MeC_41 41: Stroma_Myofibroblast    Stroma: stroma cells Stroma Myofibroblast 49     8      8      1
+42     MeC_42 42: M_Macrophage-IL1-NFKB   M: monocytes and macrophages       M      Mac_IL1_NFKB  34     8      8      1
+43     MeC_43 43: T_T-naive T: CD8T, CD4T, NK cells     T      T_naive       16     7      7      1
+44     MeC_44 44: Pan_Ubiquitin-C-UBC     Pan: Pan-cell signaling     Pan    MeC_44 75     7      7      0
+45     MeC_45 45: M_Macrophage-IL1-JUN    M: monocytes and macrophages       M      Mac_IL1_JUN   35     7      7      1
+46     MeC_46 46: Myeloid_Erythrocytes    Myeloid: other myeloid cells besides monocytes and macrophages OtherMye      Erythrocytes  43     7      7      1
+47     MeC_47 47: Pan_Glycolysis   Pan: Pan-cell signaling     Pan    Glycolysis    62     7      7      1
+48     MeC_48 48: T_NK-T-CCL5      T: CD8T, CD4T, NK cells     T      NK-T_CCL5     11     7      7      1
+49     MeC_49 49: M_Macrophage_RNASE1-C1Q M: monocytes and macrophages       M      Mac_RNASE_C1Q 39     7      6      1
+50     MeC_50 50: B_B-PAX5  B: B cells    B      B_PAX5 1      7      7      1
+51     MeC_51 51: DC_DC-Mature     DC: dendritic cells  DC     DC_mature     27     7      7      1
+52     MeC_52 52: M_Monocyte-LYZ   M: monocytes and macrophages       M      Mono_MeC_52   29     6      6      1
+53     MeC_53 53: Pan_MHCI  Pan: Pan-cell signaling     Pan    MHCI   58     6      6      1
+54     MeC_54 54: Pan_Ribosome-RPS18      Pan: Pan-cell signaling     Pan    Ribosome_1    70     6      6      1
+55     MeC_55 55: DC_cDC1   DC: dendritic cells  DC     cDC1   28     6      6      1
+56     MeC_56 56: T_T-CREM  T: CD8T, CD4T, NK cells     T      T_CREM 18     6      6      1
+57     MeC_57 57: Pan_AP1-JUN      Pan: Pan-cell signaling     Pan    JUN/FOS_1     65     6      6      1
+58     MeC_58 58: Pan_MHCII Pan: Pan-cell signaling     Pan    MHCII_1       57     6      6      1
+59     MeC_59 59: B_B-Ig-lambda    B: B cells    B      B_Ig-lambda   5      6      5      1
+60     MeC_60 60: Pan_Gprotein-regulator-RGS1    Pan: Pan-cell signaling     Pan    MeC_60 76     6      6      0
+61     MeC_61 61: Pan_AP1-FOS      Pan: Pan-cell signaling     Pan    JUN/FOS       64     6      6      1
+62     MeC_62 62: Pan_AP1-JUNB     Pan: Pan-cell signaling     Pan    MeC_62_AP1    77     6      6      0
+63     MeC_63 63: Pan_MHCII-HLA-DRA       Pan: Pan-cell signaling     Pan    MHCII  56     6      6      1
+64     MeC_64 64: Pan_AP1-IER2     Pan: Pan-cell signaling     Pan    IER2/JUN/FOS  66     6      6      1
+65     MeC_65 65: T_T-co-signaling T: CD8T, CD4T, NK cells     T      T_co-signaling       15     6      6      1
+66     MeC_66 66: Pan_CCL2  Pan: Pan-cell signaling     Pan    CCL2_MeC_66   68     6      6      1
+67     MeC_67 67: Pan_Heat-stress-HSPA1A  Pan: Pan-cell signaling     Pan    MeC_67 78     5      5      1
+68     MeC_68 68: Pan_NR4A-signaling      Pan: Pan-cell signaling     Pan    NR4A_signaling       63     5      5      1
+69     MeC_69 69: T_CD4T-CXCR4     T: CD8T, CD4T, NK cells     T      CD4T_MeC_69   24     5      5      1
+70     MeC_70 70: T_T-non-naive    T: CD8T, CD4T, NK cells     T      T_non_naive   79     5      5      0
+71     MeC_71 71: Pan_Mito-ribo    Pan: Pan-cell signaling     Pan    Mito._Ribo.   73     5      3      0
+72     MeC_72 72: Pan_Spermidine-SAT1     Pan: Pan-cell signaling     Pan    MeC_72_T      80     5      5      0
+73     MeC_73 73: Pan_Ribosome-CXCR4      Pan: Pan-cell signaling     Pan    Ribosome_2    71     5      5      0
+74     MeC_74 74: M_Monocyte-CD14-proliferation  M: monocytes and macrophages       M      Mono_CD14_prolif.    32     5      5      1
+75     MeC_75 75: T_NK-T-Cytotoxic-GZMB   T: CD8T, CD4T, NK cells     T      Cytotoxic_NK-T_GZMK  8      5      5      1
+76     MeC_76 76: Pan_CXCL1-CXCL2  Pan: Pan-cell signaling     Pan    CXCL1/2       67     5      5      1
+77     MeC_77 77: B_Plasma-JCHAIN  B: B cells    B      Bplasma_1     4      5      4      1
+78     MeC_78 78: T_CD4T-IL7R      T: CD8T, CD4T, NK cells     T      CD4T_IL7R     23     5      5      1
+79     MeC_79 79: Pan_Steroid-induced-TSC22D3    Pan: Pan-cell signaling     Pan    MeC_79 81     5      5      0
+80     MeC_80 80: Pan_Ferritin-FTH1       Pan: Pan-cell signaling     Pan    MeC_80 82     5      5      0
+81     MeC_81 81: Stroma_Fibroblast-VEGF  Stroma: stroma cells Stroma Fibro_VEGF    45     5      5      1
+82     MeC_82 82: Pan_Phosphatase-DUSP1   Pan: Pan-cell signaling     Pan    MeC_82 83     5      5      0
+83     MeC_83 83: Pan_Myeloid-fibroblast  Pan: Pan-cell signaling     Pan    MeC_83_Mye/Fibro     74     5      5      1
+84     MeC_84 84: Pan_Ferritin-FTL Pan: Pan-cell signaling     Pan    MeC_84 84     5      5      0
+85     MeC_85 85: Pan_Actin-ACTB   Pan: Pan-cell signaling     Pan    MeC_85 85     5      5      0
