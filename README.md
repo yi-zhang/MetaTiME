@@ -15,7 +15,7 @@ Installation shall be in minutes .
 [Use MetaTiME to automatically annotate cell states and map signatures ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yi-zhang/MetaTiME/blob/main/docs/notebooks/metatime_annotator.ipynb)
 
 ## Method 
-<p align="left"><img src="https://github.com/yi-zhang/MetaTiME/blob/main/docs/source/_static/img/fig1.png" width="700" height="400"></p>
+<p align="left"><img src="https://raw.githubusercontent.com/yi-zhang/MetaTiME/main/docs/source/_static/img/fig1.png" width="700" height="400"></p>
 
 
 ### Usage
@@ -42,11 +42,15 @@ Dependency version tested:
 
 ### Reference
 Manuscript In Revision. Repo continously being improved! More details will be updated. 
+
 [Paper at bioRxiv](https://www.biorxiv.org/content/10.1101/2022.08.05.502989v1)
+
 [Journal Article doi pending]
 
 Tumor scRNAseq Data for MetaTiME @ [Zenodo](10.5281/zenodo.7410180)
+
 	- A large collection of uniformly processed tumor single-cell RNA-seq. 
+
 	- Includes raw data and MetaTiME score for the TME cells.
 
 ### Contact
