@@ -5,11 +5,11 @@ import setuptools
 
 setuptools.setup(
     name='metatime',
-    version='1.2.0',
+    version='1.2.1',
     author='Yi Zhang',
     author_email='yiz@ds.dfci.harvard.edu',
-    description='Testing installation of metatime',
-    long_description='test metatime install',
+    description='Beta installation of metatime',
+    long_description='beta metatime install',
     long_description_content_type="text/markdown",
 	url='https://github.com/yi-zhang/MetaTiME.git',
     license='MIT',
