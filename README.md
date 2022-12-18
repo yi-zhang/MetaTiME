@@ -3,7 +3,7 @@
 
 [![Documentation Status](https://readthedocs.org/projects/metatime/badge/?version=latest)](https://metatime.readthedocs.io/en/latest/?badge=latest)
 
-MetaTiME is a framework to generate data-driven, interpretable, and reproducible gene programs by integrating millions of single cells from hundreds of tumor scRNA-seq data. Applied on large-scale tumor scRNA data with 2.7 million cells, MetaTiME thus utilize the meta-components to automatically annotate cell states for single-cells from tumor microenvironment. 
+MetaTiME is a framework to generate data-driven, interpretable, and reproducible gene programs by integrating millions of single cells from hundreds of tumor scRNA-seq data. Applied on large-scale tumor scRNA data with 1.7 million Tcells, MetaTiME thus utilize the meta-components to automatically annotate cell states for single-cells from tumor microenvironment. 
 ( * BETA version, Currently under development  :)
 
 ## Installation
@@ -47,22 +47,30 @@ Manuscript In Revision. Repo continously being improved! More details will be up
 
 [Journal Article doi pending]
 
-Tumor scRNAseq Data for MetaTiME @ [Zenodo](10.5281/zenodo.7410180)
+### Training Datasets
 
-	- A large collection of uniformly processed tumor single-cell RNA-seq. 
+Tumor scRNAseq Data for MetaTiME @ [Zenodo](https://zenodo.org/record/7410180)
 
-	- Includes raw data and MetaTiME score for the TME cells.
+- A large collection of uniformly processed tumor single-cell RNA-seq. 
+
+- Includes raw data and MetaTiME score for the TME cells.
 
 ### Contact
 
 
 Yi Zhang, Ph.D.
-Research Fellow
-Department of Data Science
-Dana-Farber Cancer Institute
-Harvard University T.H. Chan School of Public Health
 
 yiz [AT] ds.dfci.harvard.edu
 
-@Wings7Spread
+[Twitter] | (https://twitter.com/Wings7Spread) [Website](https://yi-zhang.github.io/)
+
+Research Fellow
+
+Department of Data Science
+
+Dana-Farber Cancer Institute
+
+Harvard University T.H. Chan School of Public Health
+
+
 
