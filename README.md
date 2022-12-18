@@ -62,7 +62,7 @@ Yi Zhang, Ph.D.
 
 yiz [AT] ds.dfci.harvard.edu
 
-[Twitter] | (https://twitter.com/Wings7Spread) [Website](https://yi-zhang.github.io/)
+[Twitter](https://twitter.com/Wings7Spread) |  [Website](https://yi-zhang.github.io/)
 
 Research Fellow
 

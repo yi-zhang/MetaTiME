@@ -9,6 +9,7 @@ import pandas as pd
 import scanpy as sc
 import seaborn as sns
 import anndata
+import scipy.stats as ss
 
 def _get_score_pd( adata, meccols ):
     """ 
@@ -77,7 +78,7 @@ def enrich_mec_cluster(  labeltype, adata, labelcol , meccols , mecnamedict ):
 
 def enrich_mec( adata , labelcol , mecnamedict ):
     """ 
-    Give top matching mec per group.
+    Determine enriched MeCs per group or cluster.
 
     Parameters
     ----------
@@ -126,7 +127,7 @@ def test_sig_smallcluster(Xproj, meci, cellscond1, cellscond2):
     """ 
     testing signature difference at each cell group, for certain mec signatures in meci.
     """
-    import scipy.stats as ss
+    
     x1 = Xproj.loc[cellscond1, meci].values
     x2 = Xproj.loc[cellscond2, meci].values
 
@@ -170,15 +171,35 @@ def dmec( adata,
     """ 
     Differential signature analysis
 
-
-    adata: scRNA.
-    pdata: Projection cell by signature. 
-    test_clusters: cell clusters included based on adata.obs[clutsercol]
+    Parameters
+    ----------
+    adata
+        scRNA object
+    pdata
+        Projection score table, cell by signature. 
     allcellscond1
+        list of barcodes of cells from condition 1
     allcellscond2
-    clustercol: condition column in adata.obs
-    cluster_mec_enriched: what mec to test in each cluster in test_clusters
+        list of barcodes of cells from condition 2
+    clustercol
+        cell cluter column in adata.obs 
+    cluster_mec_enriched
+        what mec to test in each cluster in test_clusters
     mecnamedict
+        for renaming dat columns into functional names
+        can be loaded from pre-computed tumor MeC functional annotation
+    test_clusters
+        Which cell clusters to test based on adata.obs[clutsercol]
+
+    Returns
+    ----------
+    diffmec
+        dictonary containing per-cluster differential testing results, good for summarizing and generating plots
+    diffmecsig
+        dictonary containing per-cluster differential testing results filtered to contain significant ones
+    diffmec_full
+        dictonary containing per-cluster differential testing results with more details
+
     """
     if(not test_clusters or test_clusters == 'all'):
         test_clusters =adata.obs[clustercol].drop_duplicates().tolist()
@@ -186,8 +207,6 @@ def dmec( adata,
     diffmec={}
     diffmecsig={}
     for test_cluster in test_clusters:
-        #print(test_cluster)
-        #cell_clusteri = adata[adata.obs['celltype_major']=='Myeloid'].obs.index
         cell_clusteri = adata[adata.obs[ clustercol ]== test_cluster ].obs.index
         cellscond1 = allcellscond1.intersection(cell_clusteri)
         cellscond2 = allcellscond2.intersection(cell_clusteri)
@@ -227,77 +246,9 @@ def dmec( adata,
     return( diffmec, diffmecsig, diffmec_full)
 
 
-def dmec_major( adata, Xproj, allcellscond1,allcellscond2,clustercol  ,mecnamedict):
-    """ 
-    DNU
-    Differential signature analysis for each major class. also see dmeccomp (differential mec composition but currently DNU)
-    
-    adata: scRNA, or pdata..
-    Xproj: DataFrame cell by signature. 
-    test_clusters: cell clusters included based on adata.obs[clutsercol]
-    allcellscond1
-    allcellscond2
-    clustercol: condition column in adata.obs, can be assign_ident
-    cluster_mec_enriched: what mec to test in each cluster in test_clusters
-    """
-    # generate mecs to test
-
-    majorcts = adata.obs[ clustercol ].drop_duplicates().values.tolist()
-    cluster_mec_enriched = pd.DataFrame( None, index = majorcts, columns = ['topmec'])
-    for majorct in majorcts:
-        cells = adata.obs[adata.obs[ clustercol ].isin([ majorct ])].index
-        mecs_to_test = adata.obs.loc[cells]['assign_pred_leiden'].drop_duplicates().values.tolist()
-        cluster_mec_enriched.loc[majorct, 'topmec'] = ','.join( mecs_to_test)
-
-    diffmec_full={}
-    diffmec={}
-    diffmecsig={}
-    for test_cluster in majorcts:
-        #print(test_cluster)
-        #cell_clusteri = adata[adata.obs['celltype_major']=='Myeloid'].obs.index
-        cell_clusteri = adata[adata.obs[ clustercol ]== test_cluster ].obs.index
-        cellscond1 = allcellscond1.intersection(cell_clusteri)
-        cellscond2 = allcellscond2.intersection(cell_clusteri)
-        if((len(cellscond1)==0) or(len(cellscond2)==0)):
-            continue
-        # signatures that has high (>1std) score for this cluster
-        clusters_strong_sig1 = cluster_mec_enriched.loc[test_cluster,'topmec'].split(',')
-        if(len(clusters_strong_sig1)==0 or clusters_strong_sig1[0]==''):
-            continue
-
-
-        #Xproj = pdata.to_df()
-        res = pd.DataFrame(index=Xproj.columns)
-        #N2 = len(allcellscond2);N1 = len(allcellscond1)
-        for meci in Xproj.columns:
-            t = test_sig_smallcluster(Xproj, meci, cellscond1, cellscond2 )
-            res.loc[meci, '-logp']= t[0]
-            res.loc[meci, 'logfc']= t[1]
-            res.loc[meci, 'logctfc']= t[2]
-            res.loc[meci, 'meanb']= t[3]
-            res.loc[meci, 'meana']= t[4]
-
-        diff_mec = res.sort_values(ascending=False,by='logctfc')
-        diff_mec['scorecol'] = diff_mec.index
-        diff_mec = diff_mec.rename(index=mecnamedict)
-
-        diff_mec_matchedmec = diff_mec.loc[clusters_strong_sig1]
-        diff_mec_matchedmec_sig = diff_mec_matchedmec[diff_mec_matchedmec['-logp']>=2].sort_values(ascending=False, by='logctfc')
-        tmp = {'diff_mec_matchedmec_sig': diff_mec_matchedmec_sig,
-               'diff_mec': diff_mec,
-               'full_diff': res}
-        diffmec_full.update({test_cluster : tmp })
-        if(len(diff_mec_matchedmec_sig)>0):
-            diffmecsig.update({ test_cluster: diff_mec_matchedmec_sig })
-        if(len(diff_mec)>0):
-            diffmec.update({ test_cluster: diff_mec_matchedmec })
-    return( diffmec, diffmecsig, diffmec_full)
-
 def plotdata_diffmec( diffmec, mecnamedict):
     """
-    --
-    #todo: when mecnamedict has duplicates there is bug.
-    # """
+    """
     import seaborn as sns
     import matplotlib.pyplot as plt
     from plmapper import MidpointNormalize
@@ -324,10 +275,7 @@ def plotdata_diffmec( diffmec, mecnamedict):
 
 def plot_diffmec( diffmec, mecnamedict):
     """
-    --
-    
-
-    # """
+    """
     import seaborn as sns
     import matplotlib.pyplot as plt
     
@@ -376,15 +324,33 @@ def plot_diffmec( diffmec, mecnamedict):
     return(g)
 
 
-def topdiff_df(diffmec ):
+def topdiff_df(diffmec,
+             CUT_LOGPPOS = 1.3,
+             CUT_EFFECTPOS = 1,
+             CUT_EFFECTNEG = -1,
+             FCCOL = 'effect'
+             ):
     """
-    diff, diff_sig = dmec.topdiff_df(diffmec)
+    Organize per-cluster differential signature results into tables
+
+    Parameters
+    ----------
+    diffmec
+        differential expression dict generated by dmec.dmec
+    CUT_LOGPPOS 
+        negative log p value cutoff to determin significance, default: 1.3 (#p=0.5)
+    CUT_EFFECTPOS
+        positive effect size to cut . default: 1 ( 1 std shift)
+    CUT_EFFECTNEG
+        negative effect size to cut . default: -1 ( 1 std shift)
+    FCCOL
+        the 'effect' to use (fold change)
+
+    Example
+    ----------
+    `diff, diff_sig = dmec.topdiff_df(diffmec)`
+
     """
-    CUT_LOGPPOS = 1.3 #p=0.5
-    CUT_EFFECTPOS = 1 # 1 std shift
-    CUT_EFFECTNEG = -1 # 1 std shift
-    #FCCOL = 'logctft'
-    FCCOL = 'effect'
     tlst = []
     for cluster1 in diffmec.keys():
         df = diffmec[ cluster1 ].copy()
@@ -406,7 +372,20 @@ def topdiff_df(diffmec ):
 
 
 def plot_topdiff( diffmec, fontsize = 5 ):
-    
+    """
+    Parameters
+    ----------
+    diffmec
+        dictonary containing per-cluster differential testing results
+    fontsize
+        fontsize on the differential scatter plot
+
+    Example
+    ----------
+    `sns.set_theme(style='white')
+    fig_topdiff = dmec.plot_topdiff(diffmec, fontsize=6)
+    `
+    """
     CUT_LOGPPOS = 1.3 #p=0.5
     CUT_EFFECTPOS = 1 # 1 std shift
     CUT_EFFECTNEG = -1 # 1 std shift
@@ -453,37 +432,4 @@ def plot_topdiff( diffmec, fontsize = 5 ):
     adjust_text(texts, arrowprops=dict(arrowstyle='-', color='gray'), autoalign='xy')
     ax.set_xlabel('Effect')
     return( fig, ax )
-
-
-def plot_test(df):
-    used_networks = [1, 5, 6, 7, 8, 12, 13, 17]
-    used_columns = (df.columns
-                    .get_level_values("network")
-                    .astype(int)
-                    .isin(used_networks))
-    df = df.loc[:, used_columns]
-
-    df.columns = df.columns.map("-".join)
-
-    # Compute a correlation matrix and convert to long-form
-    corr_mat = df.corr().stack().reset_index(name="correlation")
-
-    # Draw each cell as a scatter point with varying size and color
-    g = sns.relplot(
-        data=corr_mat,
-        x="level_0", y="level_1", hue="correlation", size="correlation",
-        palette="vlag", hue_norm=(-1, 1), edgecolor=".7",
-        height=15, sizes=(50, 250), size_norm=(-.2, .8),
-    )
-
-    # Tweak the figure to finalize
-    g.set(xlabel="", ylabel="", aspect="equal")
-    g.despine(left=True, bottom=True)
-    g.ax.margins(.02)
-    for label in g.ax.get_xticklabels():
-        label.set_rotation(90)
-    for artist in g.legend.legendHandles:
-        artist.set_edgecolor(".7")
-    return(g)
-    
 

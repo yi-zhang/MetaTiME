@@ -7,7 +7,7 @@ setuptools.setup(
     name='metatime',
     version='1.2.1',
     author='Yi Zhang',
-    author_email='yiz@ds.dfci.harvard.edu',
+    author_email='wingsyiz@gmail.com',
     description='Beta installation of metatime',
     long_description='beta metatime install',
     long_description_content_type="text/markdown",
@@ -17,5 +17,5 @@ setuptools.setup(
 	package_data = {
 		'metatime': ['pretrained/mec/*txt']
 		},
-    install_requires=['pandas','scanpy','anndata','matplotlib','adjustText', 'leidenalg', 'harmonypy'],
+    install_requires=['pandas','scanpy','anndata','matplotlib','adjustText', 'leidenalg', 'harmonypy', 'scipy','seaborn'],
 )
