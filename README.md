@@ -1,5 +1,5 @@
 # MetaTiME: Meta-components in Tumor immune MicroEnvironment 
-<p align="left"><img src="https://github.com/yi-zhang/MetaTiME/blob/main/docs/source/_static/img/logo.png" width="290" height="240"></p>
+<p align="left"><img src="https://raw.githubusercontent.com/yi-zhang/MetaTiME/main/docs/source/_static/img/logo.png" width="290" height="240"></p>
 
 [![Documentation Status](https://readthedocs.org/projects/metatime/badge/?version=latest)](https://metatime.readthedocs.io/en/latest/?badge=latest)
 
@@ -7,7 +7,15 @@ MetaTiME is a framework to generate data-driven, interpretable, and reproducible
 ( * BETA version, Currently under development  :)
 
 ## Installation
-`pip install git+https://github.com/yi-zhang/MetaTiME.git`
+
+Create a new virtual env and activate (optional)
+
+`python -m venv metatime-env; 
+source metatime-env/bin/activate`
+
+Use pip to install
+
+`pip install metatime`
 
 Installation shall be in minutes .
 ## Interactive tutorials
@@ -36,7 +44,7 @@ Dependency version tested:
 - scanpy==1.8.2
 - anndata==0.8.0
 - matplotlib==3.5.1
-- adjustText==0.8 beta
+- adjustText==0.7.3
 - leidenalg==0.8.3
 
 

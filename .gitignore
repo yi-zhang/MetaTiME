@@ -23,3 +23,8 @@ docs/notebooks/*h5ad
 metatime/testdata.py
 docs/build*
 docs/build/*
+
+# pypi build
+dist
+build
+
