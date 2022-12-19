@@ -1,7 +1,12 @@
 # MetaTiME: Meta-components in Tumor immune MicroEnvironment 
 <p align="left"><img src="https://raw.githubusercontent.com/yi-zhang/MetaTiME/main/docs/source/_static/img/logo.png" width="290" height="240"></p>
 
+[![Latest PyPI Version][pb]][pypi]
 [![Documentation Status](https://readthedocs.org/projects/metatime/badge/?version=latest)](https://metatime.readthedocs.io/en/latest/?badge=latest)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7410180.svg)](https://doi.org/10.5281/zenodo.7410180)
+
+[pb]: https://img.shields.io/pypi/v/metatime.svg
+[pypi]: https://pypi.org/project/metatime/
 
 MetaTiME is a framework to generate data-driven, interpretable, and reproducible gene programs by integrating millions of single cells from hundreds of tumor scRNA-seq data. Applied on large-scale tumor scRNA data with 1.7 million Tcells, MetaTiME thus utilize the meta-components to automatically annotate cell states for single-cells from tumor microenvironment. 
 ( * BETA version, Currently under development  :)
