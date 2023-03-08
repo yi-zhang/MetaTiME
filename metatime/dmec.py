@@ -387,7 +387,7 @@ def plot_topdiff( diffmec, fontsize = 5 ,
                 ):
     """
     Plot top differential signature cluster-wise.
-    X-axis: log⁡ratio of mean signature scores between two conditions. Y-axis: -⁡log(p⁡-value) from two-sided Wilcoxon test. 
+    X-axis: log⁡ratio of mean signature scores between two conditions. Y-axis: -⁡log(p⁡-value) from two-sided t test or wilcoxon test. 
     For significant signatures, size of the dots is proportionally to the mean signature score in the high-signature group.
 
     Parameters
