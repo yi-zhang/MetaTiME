@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name='metatime',
-    version='1.2.2',
+    version='1.2.3',
     author='Yi Zhang',
     author_email='wingsyiz@gmail.com',
 	description='Beta MetaTiME: annotate TME scRNA cell states',
