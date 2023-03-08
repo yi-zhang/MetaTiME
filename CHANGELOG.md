@@ -1,5 +1,7 @@
 # Changelog
 *********************************
+## MetaTiME 1.2.3 (Mar 8, 2022)
+Update tutorial; Zenodo version setup
 ## MetaTiME 1.2.2 (Dec 18, 2022)
 Add MetaTiME Differental signature updated docstring ; pypi setup
 ## MetaTiME 1.2.1 (Dec 16, 2022)
