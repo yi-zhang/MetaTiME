@@ -123,7 +123,7 @@ def cohend( x1, x2 ):
     cohens_d = (np.mean(x1) - np.mean(x2)) / (np.sqrt((np.std(x1) ** 2 + np.std(x2) ** 2) / 2))
     return(cohens_d)
 
-def test_sig_smallcluster(Xproj, meci, cellscond1, cellscond2):
+def test_sig_smallcluster(Xproj, meci, cellscond1, cellscond2, test_method ):
     """ 
     testing signature difference at each cell group, for certain mec signatures in meci.
     """
@@ -134,8 +134,12 @@ def test_sig_smallcluster(Xproj, meci, cellscond1, cellscond2):
     #cut=2
     #y1=x1[x1>=cut]
     #y2=x2[x2>=cut]
-    #[s,p]=ss.ranksums(x2, x1)
-    [s,p]=ss.ttest_ind(x2, x1)
+    
+    
+    if(test_method == 'ttest'):
+        [s,p]=ss.ttest_ind(x2, x1)
+    elif(test_method == 'wilcoxon'):
+        [s,p]=ss.ranksums(x2, x1)
     #u,p = ss.mannwhitneyu(x1,x2)
     #logfc = np.log2((np.mean(y2)/len(x2))/(np.mean(y1)/len(x1)))# consider cell number differences
     #logfc = np.log2((np.median(y2)+1)/(np.median(y1)+1))# consider cell number differences
@@ -167,7 +171,9 @@ def dmec( adata,
           clustercol: str  ,
           cluster_mec_enriched: pd.DataFrame, 
           mecnamedict,
-          test_clusters = None ,):
+          test_clusters = None ,
+          test_method: Union['ttest','wilcoxon'] = 'ttest',
+          ):
     """ 
     Differential signature analysis
 
@@ -190,7 +196,8 @@ def dmec( adata,
         can be loaded from pre-computed tumor MeC functional annotation
     test_clusters
         Which cell clusters to test based on adata.obs[clutsercol]
-
+    test_method
+        test statistics, either ttest or wilcoxon
     Returns
     ----------
     diffmec
@@ -222,7 +229,7 @@ def dmec( adata,
         res = pd.DataFrame(index=Xproj.columns)
         #N2 = len(allcellscond2);N1 = len(allcellscond1)
         for meci in Xproj.columns:
-            t = test_sig_smallcluster(Xproj, meci, cellscond1, cellscond2 )
+            t = test_sig_smallcluster(Xproj, meci, cellscond1, cellscond2, test_method=test_method )
             res.loc[meci, '-logp']= t[0]
             res.loc[meci, 'effect']= t[1]
             res.loc[meci, 'effect1']= t[2]
@@ -248,6 +255,7 @@ def dmec( adata,
 
 def plotdata_diffmec( diffmec, mecnamedict):
     """
+
     """
     import seaborn as sns
     import matplotlib.pyplot as plt
@@ -371,8 +379,17 @@ def topdiff_df(diffmec,
     return( dat, dat_sig )
 
 
-def plot_topdiff( diffmec, fontsize = 5 ):
+def plot_topdiff( diffmec, fontsize = 5 ,
+                CUT_LOGPPOS = 1.3, #p=0.5,
+                CUT_EFFECTPOS = 1, # 1 std shift
+                CUT_EFFECTNEG = -1, # 1 std shift
+                FCCOL = 'effect', 
+                ):
     """
+    Plot top differential signature cluster-wise.
+    X-axis: log⁡ratio of mean signature scores between two conditions. Y-axis: -⁡log(p⁡-value) from two-sided t test or wilcoxon test. 
+    For significant signatures, size of the dots is proportionally to the mean signature score in the high-signature group.
+
     Parameters
     ----------
     diffmec
@@ -386,11 +403,11 @@ def plot_topdiff( diffmec, fontsize = 5 ):
     fig_topdiff = dmec.plot_topdiff(diffmec, fontsize=6)
     `
     """
-    CUT_LOGPPOS = 1.3 #p=0.5
-    CUT_EFFECTPOS = 1 # 1 std shift
-    CUT_EFFECTNEG = -1 # 1 std shift
+    CUT_LOGPPOS = CUT_LOGPPOS
+    CUT_EFFECTPOS = CUT_EFFECTPOS
+    CUT_EFFECTNEG = CUT_EFFECTNEG
     #FCCOL = 'logctft'
-    FCCOL = 'effect'
+    FCCOL = FCCOL
     tlst = []
     for cluster1 in diffmec.keys():
         df = diffmec[ cluster1 ].copy()

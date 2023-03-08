@@ -21,7 +21,7 @@ def load_mecname( mode='table',
     mode
         choose from ['mecnamedict', 'table', 'meciddict']
         load manual assigned name for easy understanding of assigned names
-        from file: MeC_anno_name.txt under mecDIR.
+        from file: MeC_anno_name.tsv under mecDIR.
         Required columns: `['MeC_id', 'Annotation', 'UseForCellStateAnno']` 
         Required seperator: tab
         Annotation column NA will be filtered.
@@ -31,7 +31,7 @@ def load_mecname( mode='table',
     functional annotation in desided format
 
     """
-    mecname = pd.read_table(os.path.join( mecDIR , 'MeC_anno_name.txt'))
+    mecname = pd.read_table(os.path.join( mecDIR , 'MeC_anno_name.tsv'))
     if(mode=='table'):
         mectable=mecname.copy()
         #mectable['color_level0'] = mectable['MajorLineage_level0'].apply(lambda t: config.level0colordict[t])
@@ -99,8 +99,8 @@ class MetatimeMecs():
         Load pre-computed Meta-component matrix and ordered list.
         Look for precomputed files in mecDIR
 
-            MeC_allgene_average-weights.txt
-            MeC_topgene.txt
+            MeC_allgene_average-weights.tsv
+            MeC_topgene.tsv
 
         Parameters
         ----------
@@ -118,15 +118,15 @@ class MetatimeMecs():
 
         """
         try:
-            mec_score = pd.read_table( os.path.join( mecDIR , 'MeC_allgene_average-weights.txt') , index_col = 0)
-            mec_topg = pd.read_table( os.path.join( mecDIR, 'MeC_topgene.txt') , index_col = 0)
-            mec_anno = pd.read_table( os.path.join( mecDIR, 'MeC_anno.txt') , index_col = 0)
+            mec_score = pd.read_table( os.path.join( mecDIR , 'MeC_allgene_average-weights.tsv') , index_col = 0)
+            mec_topg = pd.read_table( os.path.join( mecDIR, 'MeC_topgene.tsv') , index_col = 0)
+            mec_anno = pd.read_table( os.path.join( mecDIR, 'MeC_anno.tsv') , index_col = 0)
             # use 'MeC' name
             mec_score.columns = 'MeC_'+mec_score.columns
             return( MetatimeMecs( mec_score, mec_topg, mec_anno ) )
 
         except Exception as exception:
-            raise Exception(f' Error loading model. check files in {mecDIR}. MeC_allgene_average-weights.txt, MeC_topgene.txt, MeC_anno.txt. {exception}')
+            raise Exception(f' Error loading model. check files in {mecDIR}. MeC_allgene_average-weights.tsv, MeC_topgene.tsv, MeC_anno.tsv. {exception}')
 
     @property
     def feature(self) -> np.ndarray:
