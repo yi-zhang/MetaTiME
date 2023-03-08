@@ -23,7 +23,7 @@ setuptools.setup(
     ],
     packages=['metatime'],
 	package_data = {
-		'metatime': ['pretrained/mec/*txt']
+		'metatime': ['pretrained/mec/*tsv']
 		},
     python_requires='>=3.6',
     install_requires=['pandas','scanpy','anndata','matplotlib','adjustText', 'leidenalg', 'harmonypy', 'scipy','seaborn'],
