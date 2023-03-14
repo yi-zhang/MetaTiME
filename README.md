@@ -34,11 +34,11 @@ Next we have a tutorial on applying MetaTiME on new TME scRNAseq data to annotat
  
 
 ## Reference
-Manuscript In Revision. Repo continously being improved! More details will be updated. 
+Manuscript In Revision. Repo continously being improved! More details will be updated and suggested improvements welcome. 
 
 [Paper at bioRxiv](https://www.biorxiv.org/content/10.1101/2022.08.05.502989v1)
 
-[Journal Article doi pending]
+Accepted at Nature Communications [Journal Article doi pending]
 
 ## Training Datasets
 
