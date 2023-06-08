@@ -25,7 +25,8 @@ Next we have a tutorial on applying MetaTiME on new TME scRNAseq data to annotat
 ## Usage
 ### MetaTiME-Annotator
  - [Use MetaTiME to automatically annotate cell states and map signatures](https://github.com/yi-zhang/MetaTiME/blob/main/docs/notebooks/metatime_annotator.ipynb)
-
+ - MetaTiME re-training pipeline coming soon!
+ 
 ### Interactive tutorial
 [Use MetaTiME to automatically annotate cell states and map signatures ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yi-zhang/MetaTiME/blob/main/docs/notebooks/metatime_annotator.ipynb)
 
@@ -34,11 +35,11 @@ Next we have a tutorial on applying MetaTiME on new TME scRNAseq data to annotat
  
 
 ## Reference
-Manuscript In Revision. Repo continously being improved! More details will be updated and suggested improvements welcome. 
+Repo continously being improved! More details will be updated and suggested improvements welcome. 
 
-[Paper at bioRxiv](https://www.biorxiv.org/content/10.1101/2022.08.05.502989v1)
+- [Paper at Nature Communications] (https://www.nature.com/articles/s41467-023-38333-8)
+- [Paper at bioRxiv](https://www.biorxiv.org/content/10.1101/2022.08.05.502989v1)
 
-Accepted at Nature Communications [Journal Article doi pending]
 
 ## Training Datasets
 
@@ -72,6 +73,7 @@ Dependency version tested:
 Yi Zhang, Ph.D.
 
 yiz [AT] ds.dfci.harvard.edu
+
 [Twitter](https://twitter.com/Wings7Spread) |  [Website](https://yi-zhang.github.io/)
 Research Fellow
 Department of Data Science
