@@ -25,7 +25,7 @@ Next we have a tutorial on applying MetaTiME on new TME scRNAseq data to annotat
 ## Usage
 ### MetaTiME-Annotator
  - [Use MetaTiME to automatically annotate cell states and map signatures](https://github.com/yi-zhang/MetaTiME/blob/main/docs/notebooks/metatime_annotator.ipynb)
- - MetaTiME re-training pipeline coming soon!
+ - [New] MetaTiME re-training pipeline at https://github.com/yi-zhang/MetaTiMEpretrain/
  
 ### Interactive tutorial
 [Use MetaTiME to automatically annotate cell states and map signatures ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yi-zhang/MetaTiME/blob/main/docs/notebooks/metatime_annotator.ipynb)
